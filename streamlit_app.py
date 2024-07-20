@@ -2,7 +2,14 @@ import streamlit as st
 import pandas as pd
 from io import StringIO
 
-uploaded_file = st.file_uploader("Upload a panoramic radio, we'll see if that math our DB! 🦷")
+st.title("Welcome in Jaw Tracker 🦈")
+
+uploaded_file = st.file_uploader(
+    """
+    Upload a panoramic radio 🦷
+    We'll see if that match something in our DB!
+    """
+)
 if uploaded_file is not None:
     # To read file as bytes:
     bytes_data = uploaded_file.getvalue()
